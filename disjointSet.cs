@@ -9,10 +9,7 @@ namespace Set{
 		public DisjointSet() { }
 
 		public DisjointSet(int n){
-			Set = new ElementType[n+1];
-			
-			for(int i = 1; i <= n; i++)
-				Set[i] = 0;
+			Init(n);
 		}
 
 		public void Init(int n) {
