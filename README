@@ -1,0 +1,7 @@
+Maze generator by Union-Find algorithm in Disjoint Set ADT.
+
+The maze is printed on console.
+
+'a' is a wall, and blankspace is a way.
+
+It doesn't look good because of line spacing problem :(
