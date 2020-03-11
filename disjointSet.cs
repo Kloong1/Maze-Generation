@@ -1,10 +1,12 @@
 using System;
 using ElementType = System.Int32;
+using System.Collections.Generic;
 
 namespace Set{
 
 	public class DisjointSet {
 		private ElementType[] Set;
+		private Stack<ElementType> st = new Stack<ElementType>();
 
 		public DisjointSet() { }
 
@@ -20,8 +22,14 @@ namespace Set{
 		}
 
 		public ElementType Find(ElementType x){
-			while(Set[x] > 0)
+			while(Set[x] > 0){
+				st.Push(x);
 				x = Set[x];
+			}
+
+			while(st.Count > 0){
+				Set[st.Pop()] = x;
+			}
 
 			return x;
 		}
